@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">GuessNumberGame</string>
+    <string name="menu">Menu</string>
+    <string name="start_game">Start game</string>
+    <string name="exit">Exit</string>
+    <string name="guess_the_number">Guess the number</string>
+    <string name="verify">verify</string>
+    <string name="result">result</string>
+    <string name="results">results</string>
+    <string name="offer_guess_the_number">I ordered a number from 0 to 99 Can you guess?</string>
+    <string name="check">check</string>
+    <string name="you_results">you results</string>
 </resources>

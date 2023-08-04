@@ -1,6 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="ExtraText">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/marginNormal"
+        android:layout_marginTop="@dimen/marginNormal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/ic_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal"
+            android:text="@string/guess_the_number"
+            android:textAllCaps="true"
+            android:textAppearance="@style/Text.Title"
+            tools:ignore="MissingConstraints" />
+    </FrameLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginDouble"
+        android:layout_marginTop="@dimen/marginDouble"
+        android:layout_marginEnd="@dimen/marginDouble"
+        android:gravity="center"
+        android:text="@string/offer_guess_the_number"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Text.GameText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+
+    <FrameLayout
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/marginDouble"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStart">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/enter_field_background">
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+        <EditText
+            android:id="@+id/editTextField"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:autofillHints=""
+            android:background="@drawable/edittext_no_indicator"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:maxLength="2"
+            android:selectAllOnFocus="true"
+            android:textAppearance="@style/Text.Input"
+            android:textColor="@color/white"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+    </FrameLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/check"
+        android:textAppearance="@style/Text.Title"
+        android:textAllCaps="true"
+        android:layout_marginTop="@dimen/marginNormal"
+        android:background="@drawable/button_play_background"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+    />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_exit_background"
+        android:text="@string/result"
+        android:textAppearance="@style/Text.Title"
+        android:textAllCaps="true"
+        android:visibility="invisible"
+        android:padding="16dp"
+        android:layout_marginTop="@dimen/marginNormal"
+        app:layout_constraintTop_toBottomOf="@+id/buttonVerify"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

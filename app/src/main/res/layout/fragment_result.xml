@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/marginNormal"
+        android:layout_marginTop="@dimen/marginNormal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/ic_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal"
+            android:text="@string/result"
+            android:textAllCaps="true"
+            android:textAppearance="@style/Text.Title" />
+    </FrameLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewResults"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginDouble"
+        android:layout_marginTop="@dimen/marginDouble"
+        android:layout_marginEnd="@dimen/marginDouble"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Text.GameText"
+        android:text="@string/you_results"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonMenu"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textAppearance="@style/Text.Title"
+        android:textAllCaps="true"
+        android:background="@drawable/button_play_background"
+        android:text="@string/menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResults" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
