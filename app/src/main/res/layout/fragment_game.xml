@@ -80,7 +80,7 @@
             android:maxLength="2"
             android:selectAllOnFocus="true"
             android:textAppearance="@style/Text.Input"
-            android:textColor="@color/white"
+            android:textColor="@color/primaryTextColor"
             tools:ignore="LabelFor,SpeakableTextPresentCheck" />
 
     </FrameLayout>
