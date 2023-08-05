@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
     id ("androidx.navigation.safeargs.kotlin")
-    id("com.google.devtools.ksp")
+
 
 
 }
@@ -60,8 +60,7 @@ dependencies {
     implementation (libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
-    implementation (libs.dagger.hilt.android)
-//    ksp (libs.hilt.android.compiler)
+
 
 
 

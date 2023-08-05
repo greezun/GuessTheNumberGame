@@ -19,7 +19,7 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="@dimen/title_background_height"
             android:background="@drawable/ic_title" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -29,7 +29,7 @@
             android:text="@string/guess_the_number"
             android:textAllCaps="true"
             android:textAppearance="@style/Text.Title"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints,TextContrastCheck" />
     </FrameLayout>
 
 
@@ -37,9 +37,9 @@
         android:id="@+id/textViewStart"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/marginDouble"
+        android:layout_marginStart="@dimen/marginNormal"
         android:layout_marginTop="@dimen/marginDouble"
-        android:layout_marginEnd="@dimen/marginDouble"
+        android:layout_marginEnd="@dimen/marginNormal"
         android:gravity="center"
         android:text="@string/offer_guess_the_number"
         android:textAllCaps="true"
@@ -60,16 +60,17 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewStart">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:background="@drawable/enter_field_background">
+            android:layout_width="@dimen/enter_field_background_width"
+            android:layout_height="@dimen/enter_field_background_height"
+            android:background="@drawable/enter_field_background"
+            tools:ignore="ImageContrastCheck">
 
         </androidx.appcompat.widget.AppCompatImageView>
 
         <EditText
             android:id="@+id/editTextField"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/enter_field_size"
+            android:layout_height="@dimen/enter_field_size"
             android:layout_gravity="center"
             android:autofillHints=""
             android:background="@drawable/edittext_no_indicator"
@@ -89,17 +90,17 @@
         android:id="@+id/buttonVerify"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="@string/check"
-        android:textAppearance="@style/Text.Title"
-        android:textAllCaps="true"
         android:layout_marginTop="@dimen/marginNormal"
         android:background="@drawable/button_play_background"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        app:layout_constraintStart_toStartOf="parent"
+        android:padding="16dp"
+        android:text="@string/check"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Text.Title"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
 
-        />
+        tools:ignore="TextContrastCheck" />
     />
 
     <androidx.appcompat.widget.AppCompatButton

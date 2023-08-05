@@ -11,11 +11,7 @@ material = "1.9.0"
 constraintlayout = "2.1.4"
 navigation-fragment-ktx = "2.6.0"
 
-# Hilt
-hilt-android = "2.46.1"
 
-# KSP
-hilt-ksp = "1.8.10-1.0.9"
 
 [libraries]
 androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment-ktx" }
@@ -23,7 +19,6 @@ androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fr
 androidx-navigation-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigation-fragment-ktx" }
 androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation-fragment-ktx" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
-hilt-android-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hilt-android" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
@@ -31,16 +26,11 @@ appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "a
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 
-# Hilt
-dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt-android" }
+
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
-# Hilt
-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt-android" }
 
-# KSP
-ksp = { id = "com.google.devtools.ksp", version.ref = "hilt-ksp" }
 

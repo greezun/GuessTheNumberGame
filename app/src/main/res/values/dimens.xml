@@ -2,4 +2,8 @@
 <resources>
     <dimen name="marginNormal">24dp</dimen>
     <dimen name="marginDouble">48dp</dimen>
+    <dimen name="enter_field_background_width">150dp</dimen>
+    <dimen name="enter_field_background_height">130dp</dimen>
+    <dimen name="enter_field_size">100dp</dimen>
+    <dimen name="title_background_height">80dp</dimen>
 </resources>

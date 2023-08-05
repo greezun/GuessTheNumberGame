@@ -7,31 +7,30 @@
         <item name="android:shadowDx">0</item>
         <item name="android:shadowDy">2</item>
         <item name="android:shadowRadius">5</item>
-
     </style>
 
 
     <style name="Text.Title">
         <item name="android:textSize">24sp</item>
         <item name="android:letterSpacing">0.03</item>
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:shadowColor">#098AEE</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:shadowColor">@color/primaryShadowColor</item>
 
     </style>
 
     <style name="Text.GameText">
         <item name="fontFamily">@font/rubik_sprays_paint</item>
         <item name="android:textSize">20sp</item>
-        <item name="android:textColor">#FDC0FF</item>
-        <item name="android:shadowColor">#362C2C</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:shadowColor">@color/secondaryShadowColor</item>
 
     </style>
 
     <style name="Text.Input">
         <item name="fontFamily">@font/rubik_sprays_paint</item>
         <item name="android:textSize">60sp</item>
-        <item name="android:textColor">#FDC0FF</item>
-        <item name="android:shadowColor">#362C2C</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:shadowColor">@color/secondaryShadowColor</item>
 
     </style>
 

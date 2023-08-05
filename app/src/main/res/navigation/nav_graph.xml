@@ -7,35 +7,41 @@
     <fragment
         android:id="@+id/menuFragment"
         android:name="ua.maslak.guesnumbergame.presentation.fragments.menu.MenuFragment"
-        android:label="MenuFragment" >
+        android:label="MenuFragment">
         <action
             android:id="@+id/action_menuFragment_to_gameFragment"
-            app:destination="@id/gameFragment" />
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
         android:name="ua.maslak.guesnumbergame.presentation.fragments.game.GameFragment"
-        android:label="GameFragment" >
+        android:label="GameFragment">
         <action
             android:id="@+id/action_gameFragment_to_resultFragment"
-            app:destination="@id/resultFragment">
-
-        </action>
+            app:destination="@id/resultFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
 
 
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
         android:name="ua.maslak.guesnumbergame.presentation.fragments.result.ResultFragment"
-        android:label="ResultFragment" >
+        android:label="ResultFragment">
 
         <argument
             android:name="success"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
         <argument
             android:name="unsuccess"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
 </navigation>

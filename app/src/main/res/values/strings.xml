@@ -7,7 +7,14 @@
     <string name="verify">verify</string>
     <string name="result">result</string>
     <string name="results">results</string>
-    <string name="offer_guess_the_number">I ordered a number from 0 to 99 Can you guess?</string>
     <string name="check">check</string>
     <string name="you_results">you results</string>
+
+    <string name="offer_guess_the_number">I have chosen a number from 0 to 99. Can you guess it?</string>
+    <string name="offer_guess_the_number_again">I have guessed a number again, from 0 to 99. Can you guess it?</string>
+    <string name="congratulation">Congratulations, you guessed it! Shall we try again?</string>
+    <string name="sorry">I\'m sorry, it\'s incorrect. Shall we try again?</string>
+
+    <string name="successful">Successful attempts:\u00A0</string>
+    <string name="unsuccessful">Unsuccessful attempts:\u00A0 </string>
 </resources>

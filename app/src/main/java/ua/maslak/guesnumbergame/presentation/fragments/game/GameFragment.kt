@@ -6,13 +6,12 @@ import android.os.Looper
 import android.util.Log
 import android.view.View
 import androidx.navigation.fragment.findNavController
-import dagger.hilt.android.AndroidEntryPoint
+import ua.maslak.guesnumbergame.R
 import ua.maslak.guesnumbergame.databinding.FragmentGameBinding
 import ua.maslak.guesnumbergame.presentation.fragments.BaseFragment
 import java.util.Random
 
 
-@AndroidEntryPoint
 class GameFragment : BaseFragment<FragmentGameBinding>(FragmentGameBinding::inflate) {
 
     private var secretNumber: Int = 0
@@ -21,27 +20,24 @@ class GameFragment : BaseFragment<FragmentGameBinding>(FragmentGameBinding::infl
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         startGame()
-
     }
 
-
-
     private fun setButtonVisible() {
-        if (successfulAttempts != 0 || unsuccessfulAttempts != 0){
+        if (successfulAttempts != 0 || unsuccessfulAttempts != 0) {
             Log.d("myTag", "$successfulAttempts  $unsuccessfulAttempts ")
             binding.buttonResult.visibility = View.VISIBLE
         }
-
     }
 
     private fun startGame() {
-setButtonVisible()
+        setButtonVisible()
         val text =
-            if (successfulAttempts == 0 && unsuccessfulAttempts == 0) "Я загадав число від 0 до 99, зможеш відгадати?" else "Я знову загадав число від 0 до 99, зможеш відгадати?"
-
+            if (successfulAttempts == 0 && unsuccessfulAttempts == 0) {
+                getString(R.string.offer_guess_the_number)
+            } else {
+                getString(R.string.offer_guess_the_number_again)
+            }
         binding.textViewStart.text = text
-
-
         val random = Random()
         secretNumber = random.nextInt(100)
 
@@ -58,11 +54,11 @@ setButtonVisible()
             if (guessStr.isNotEmpty()) {
                 val guess = guessStr.toInt()
                 if (guess == secretNumber) {
-                    textViewStart.text = "Вітаю, ти відгадав, спробуємо ще раз?"
+                    textViewStart.text = getString(R.string.congratulation)
                     successfulAttempts++
 
                 } else {
-                    textViewStart.text = "Не вгадав, спробуємо ще раз?"
+                    textViewStart.text = getString(R.string.sorry)
                     unsuccessfulAttempts++
                 }
                 editTextField.text.clear()
@@ -75,6 +71,7 @@ setButtonVisible()
     }
 
     override fun setListeners() {
+
         binding.buttonResult.setOnClickListener {
             val directions = GameFragmentDirections
                 .actionGameFragmentToResultFragment(successfulAttempts, unsuccessfulAttempts)
@@ -87,4 +84,6 @@ setButtonVisible()
 
 
     }
+
+
 }

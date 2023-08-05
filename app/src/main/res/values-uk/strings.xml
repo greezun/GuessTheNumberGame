@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GuessNumberGame</string>
+    <string name="menu">Меню</string>
+    <string name="guess_the_number">Вгадай число</string>
+    <string name="you_results">ваші результати</string>
+
+    <string name="start_game">Почати гру</string>
+    <string name="exit">Вийти</string>
+    <string name="verify">перевірити</string>
+    <string name="result">результат</string>
+    <string name="results">результати</string>
+    <string name="check">перевірити</string>
+
+
+    <string name="offer_guess_the_number">Я загадав число від 0 до 99. Вгадаєте його?</string>
+    <string name="offer_guess_the_number_again">Я знову загадав число від 0 до 99. Вгадаєте його?</string>
+    <string name="congratulation">Вітаю, ви вгадали! Спробуємо ще раз?</string>
+    <string name="sorry">Вибачте, це неправильно. Спробуємо ще раз?</string>
+
+    <string name="successful">Успішні спроби:\u00A0</string>
+    <string name="unsuccessful">Невдалі спроби:\u00A0</string>
+</resources>

@@ -18,7 +18,7 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="@dimen/title_background_height"
             android:background="@drawable/ic_title"/>
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -28,39 +28,39 @@
             android:text="@string/menu"
             android:textAllCaps="true"
             android:textAppearance="@style/Text.Title"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints,TextContrastCheck" />
 
     </FrameLayout>
 
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/buttonStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:text="@string/start_game"
-            android:textAppearance="@style/Text.Title"
-            android:textAllCaps="true"
-            android:background="@drawable/button_play_background"
-            app:layout_constraintTop_toBottomOf="@+id/menuTitle"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_play_background"
+        android:padding="16dp"
+        android:text="@string/start_game"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Text.Title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuTitle"
+        tools:ignore="TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonExit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marginNormal"
         android:background="@drawable/button_exit_background"
         android:padding="16dp"
         android:text="@string/exit"
         android:textAllCaps="true"
         android:textAppearance="@style/Text.Title"
-        android:layout_marginBottom="@dimen/marginNormal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background">
@@ -17,48 +18,68 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="@dimen/title_background_height"
             android:background="@drawable/ic_title" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|center_horizontal"
-            android:text="@string/result"
+            android:text="@string/you_results"
             android:textAllCaps="true"
-            android:textAppearance="@style/Text.Title" />
+            android:textAppearance="@style/Text.Title"
+            tools:ignore="TextContrastCheck" />
     </FrameLayout>
 
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textViewResults"
+        android:id="@+id/textViewResults1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/marginDouble"
-        android:layout_marginTop="@dimen/marginDouble"
-        android:layout_marginEnd="@dimen/marginDouble"
         android:gravity="center"
+        android:text="@string/you_results"
         android:textAllCaps="true"
         android:textAppearance="@style/Text.GameText"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewResults2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="@string/you_results"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Text.GameText"
+        tools:ignore="MissingConstraints,TextContrastCheck"
+        tools:layout_editor_absoluteY="378dp" />
+
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="textViewResults1,textViewResults2 "
+        app:flow_verticalGap="@dimen/marginNormal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonMenu"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:textAppearance="@style/Text.Title"
-        android:textAllCaps="true"
         android:background="@drawable/button_play_background"
+        android:padding="16dp"
         android:text="@string/menu"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Text.Title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResults" />
+        app:layout_constraintTop_toBottomOf="@+id/flow"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
